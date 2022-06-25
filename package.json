@@ -2,10 +2,14 @@
     "name": "task-manager",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "start": "node src/app.js",
-        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js"
+        "dev": "env-cmd -f ./config/dev.env nodemon src/app.js",
+        "test": "env-cmd -f ./config/test.env jest --watch"
+    },
+    "jest": {
+        "testEnvironment": "node"
     },
     "keywords": [],
     "author": "",
@@ -24,6 +28,8 @@
     },
     "devDependencies": {
         "env-cmd": "^10.1.0",
-        "nodemon": "^2.0.13"
+        "jest": "^27.4.5",
+        "nodemon": "^2.0.13",
+        "supertest": "^6.1.6"
     }
 }
